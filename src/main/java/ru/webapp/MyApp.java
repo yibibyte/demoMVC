@@ -26,34 +26,34 @@ public class MyApp {
         SpringApplication.run(MyApp.class, args);
     }
 
-    @Bean
-    public CommandLineRunner demo() {
-        return args -> {
-        // Здесь можно добавить код для тестирования вашего приложения
-        // Например, вызвать методы вашего сервиса для создания, чтения,
-        // обновления и удаления данных и выводить результаты на консоль
-
-        // Пример:
-            Owner owner = new Owner();
-            owner.setName("John");
-            owner.setEmail("john@example.com");
-            owner.setPhone("123456789");
-            ownerService.createOwner(owner);
-
-            Pet pet = new Pet();
-            pet.setOwner(owner);
-            pet.setName("Fido");
-            pet.setAnimalType("Dog");
-            pet.setBreed("Golden Retriever");
-            pet.setAge(3);
-            pet.setVaccinations("All");
-            petService.createPet(pet);
-
-            Owner savedOwner = ownerService.getOwnerById(owner.getId());
-            System.out.println("Saved Owner: " + savedOwner);
-
-            Pet savedPet = petService.getPetById(pet.getId());
-            System.out.println("Saved Pet: " + savedPet);
-        };
-    }
+//    @Bean
+//    public CommandLineRunner demo() {
+//        return args -> {
+//        // Здесь можно добавить код для тестирования вашего приложения
+//        // Например, вызвать методы вашего сервиса для создания, чтения,
+//        // обновления и удаления данных и выводить результаты на консоль
+//
+//        // Пример:
+//            Owner owner = new Owner();
+//            owner.setName("John");
+//            owner.setEmail("john@example.com");
+//            owner.setPhone("123456789");
+//            ownerService.createOwner(owner);
+//
+//            Pet pet = new Pet();
+//            pet.setOwner(owner);
+//            pet.setName("Fido");
+//            pet.setAnimalType("Dog");
+//            pet.setBreed("Golden Retriever");
+//            pet.setAge(3);
+//            pet.setVaccinations("All");
+//            petService.createPet(pet);
+//
+//            Owner savedOwner = ownerService.getOwnerById(owner.getId());
+//            System.out.println("Saved Owner: " + savedOwner);
+//
+//            Pet savedPet = petService.getPetById(pet.getId());
+//            System.out.println("Saved Pet: " + savedPet);
+//        };
+//    }
 }
